@@ -2,11 +2,11 @@
 
 ## About
 
-Inspired by [this Reddit post](https://www.reddit.com/r/dataisbeautiful/comments/3pxna7/100_years_of_us_presidential_elections_a_table_of/)
+Inspired by [this Reddit post](https://www.reddit.com/r/dataisbeautiful/comments/3pxna7/100_years_of_us_presidential_elections_a_table_of/).
 
 Wanted to expand on it with the following improvements:
 
-* including shading for margin of victory
+* including shading for margin of victory (% of winning party - % of next highest party)
 * expanding the dataset to the earliest possible election data
 * breaking down the states into regions, since there are clear election patterns
 
