@@ -14,7 +14,7 @@ Wanted to expand on it with the following improvements:
 
 ![Election Results by State (ordered by Admission into Union)](https://raw.githubusercontent.com/zonination/election-history/master/Election-Order.png)
 
-![Election Results by Region](https://raw.githubusercontent.com/zonination/election-history/master/Elections-region.png) 
+![Election Results by Region](https://raw.githubusercontent.com/zonination/election-history/master/Election-Region.png)
 
 ## Sources:
 
