@@ -1,5 +1,5 @@
 **Tools:** R/ggplot2  
-**Code:** [Code is open-source](https://github.com/zonination/election-history)
+**Code:** [Code is open-source](https://github.com/zonination/election-history)  
 **Sources:**
 
 * **Election Data**
