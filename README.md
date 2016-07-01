@@ -2,6 +2,10 @@
 
 **Note:** This project is incomplete. There were some blips in the source file that rendered inaccurate election results in some states. I am currently in the middle of verifying each state.
 
+Verified up to:
+
+* 1840 - Harrison
+
 ## About
 
 Inspired by [this Reddit post](https://www.reddit.com/r/dataisbeautiful/comments/3pxna7/100_years_of_us_presidential_elections_a_table_of/).
