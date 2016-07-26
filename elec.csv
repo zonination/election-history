@@ -44,7 +44,7 @@ Year,State,total,party.1,%,EV,party.2,%,EV,party.3,%,EV,party.4,%,EV,Party,Notes
 1800 - Jefferson,Delaware,,0,,,3,,,,,,,,,Federalist,Electoral votes only
 1800 - Jefferson,Georgia,,4,,,0,,,,,,,,,Democratic-Republican,Electoral votes only
 1800 - Jefferson,Kentucky,,4,,,0,,,,,,,,,Democratic-Republican,Electoral votes only
-1800 - Jefferson,Maryland,,5,,,5,,,,,,,,,Federalist,Electoral votes only
+1800 - Jefferson,Maryland,,5,,,5,,,,,,,,,Democratic-Republican,Electoral votes only
 1800 - Jefferson,Massachusetts,,0,,,16,,,,,,,,,Federalist,Electoral votes only
 1800 - Jefferson,New Hampshire,,0,,,6,,,,,,,,,Federalist,Electoral votes only
 1800 - Jefferson,New Jersey,,0,,,7,,,,,,,,,Federalist,Electoral votes only
@@ -227,14 +227,14 @@ Year,State,total,party.1,%,EV,party.2,%,EV,party.3,%,EV,party.4,%,EV,Party,Notes
 1836 - Van Buren,Arkansas,3714,2380,64.1,3,0, , ,1334,35.9, ,0, , ,Democratic,
 1836 - Van Buren,Connecticut,38093,19294,50.6,8,18799,49.4, ,0, , ,0, , ,Democratic,
 1836 - Van Buren,Delaware,8895,4154,46.7, ,4736,53.2,3,0, , ,0, , ,Whig,
-1836 - Van Buren,Georgia,47259,22778,48.2, ,0, , ,24481,51.8,11,0, , ,Democratic,
+1836 - Van Buren,Georgia,47259,22778,48.2, ,0, , ,24481,51.8,11,0, , ,Whig,
 1836 - Van Buren,Illinois,33589,18369,54.7,5,15220,45.3, ,0, , ,0, , ,Democratic,
 1836 - Van Buren,Indiana,74423,33084,44.5, ,41339,55.5,9,0, , ,0, , ,Whig,
 1836 - Van Buren,Kentucky,70090,33229,47.4, ,36861,52.6,15,0, , ,0, , ,Whig,
 1836 - Van Buren,Louisiana,7425,3842,51.7,5,0, , ,3583,48.3, ,0, , ,Democratic,
 1836 - Van Buren,Maine,38740,22825,58.9,10,14803,38.2, ,0, , ,0, , ,Democratic,
 1836 - Van Buren,Maryland,48119,22267,46.3, ,25852,53.7,10,0, , ,0, , ,Whig,
-1836 - Van Buren,Massachusetts,74732,33486,44.8, ,0, , ,0, , ,41201,55.1,14,Democratic,
+1836 - Van Buren,Massachusetts,74732,33486,44.8, ,0, , ,0, , ,41201,55.1,14,Whig,
 1836 - Van Buren,Michigan,12052,6507,54,3,5545,46, ,0, , ,0, , ,Democratic,
 1836 - Van Buren,Mississippi,20079,10297,51.3,4,0, , ,9782,48.7, ,0, , ,Democratic,
 1836 - Van Buren,Missouri,18332,10995,60,4,0, , ,7337,40, ,0, , ,Democratic,
@@ -246,7 +246,7 @@ Year,State,total,party.1,%,EV,party.2,%,EV,party.3,%,EV,party.4,%,EV,Party,Notes
 1836 - Van Buren,Pennsylvania,178701,91466,51.2,30,87235,48.8, ,0, , ,0, , ,Democratic,
 1836 - Van Buren,Rhode Island,5673,2962,52.2,4,2710,47.8, ,0, , ,0, , ,Democratic,
 1836 - Van Buren,South Carolina,,0,,,0,,,0,,,11,,,Whig,Chosen by state legislature
-1836 - Van Buren,Tennessee,62197,26170,42.1, ,0, , ,36027,57.9,15,0, , ,Democratic,
+1836 - Van Buren,Tennessee,62197,26170,42.1, ,0, , ,36027,57.9,15,0, , ,Whig,
 1836 - Van Buren,Vermont,35099,14040,40, ,20994,59.8,7,0, , ,0, , ,Whig,
 1836 - Van Buren,Virginia,53945,30556,56.6,23,0, , ,23384,43.3, ,0, , ,Democratic,
 1840 - Harrison,Alabama,62511,28515,45.6, ,33996,54.4,7,,,,,,,Democratic,
@@ -397,7 +397,7 @@ Year,State,total,party.1,%,EV,party.2,%,EV,party.3,%,EV,party.4,%,EV,Party,Notes
 1860 - Lincoln,Arkansas,54152,0,0, ,5357,9.9, ,28732,53.1,4,20063,37, ,Democratic,
 1860 - Lincoln,California,119827,38733,32.3,4,37999,31.7, ,33969,28.3, ,9111,7.6, ,Republican,
 1860 - Lincoln,Connecticut,74819,43488,58.1,6,15431,20.6, ,14372,19.2, ,1528,2, ,Republican,
-1860 - Lincoln,Delaware,16115,3822,23.7, ,1066,6.6, ,7339,45.5,3,3888,24.1, ,Republican,
+1860 - Lincoln,Delaware,16115,3822,23.7, ,1066,6.6, ,7339,45.5,3,3888,24.1, ,Democratic,
 1860 - Lincoln,Florida,13301,0,0, ,223,1.7, ,8277,62.2,3,4801,36.1, ,Democratic,
 1860 - Lincoln,Georgia,106717,0,0, ,11581,10.9, ,52176,48.9,10,42960,40.3, ,Democratic,
 1860 - Lincoln,Illinois,339666,172171,50.7,11,160215,47.2, ,2331,0.7, ,4914,1.4, ,Republican,
@@ -413,7 +413,7 @@ Year,State,total,party.1,%,EV,party.2,%,EV,party.3,%,EV,party.4,%,EV,Party,Notes
 1860 - Lincoln,Mississippi,69095,0,0, ,3282,4.7, ,40768,59,7,25045,36.2, ,Democratic,
 1860 - Lincoln,Missouri,165563,17028,10.3, ,58801,35.5,9,31362,18.9, ,58372,35.3, ,Democratic,
 1860 - Lincoln,New Hampshire,65943,37519,56.9,5,25887,39.3, ,2125,3.2, ,412,0.6, ,Republican,
-1860 - Lincoln,New Jersey,121215,58346,48.1,4,62869,51.9,3,0,0, ,0,0, ,Democratic,
+1860 - Lincoln,New Jersey,121215,58346,48.1,4,62869,51.9,3,0,0, ,0,0, ,Republican,
 1860 - Lincoln,New York,675156,362646,53.7,35,312510,46.3, ,0,0, ,0,0, ,Republican,
 1860 - Lincoln,North Carolina,96712,0,0, ,2737,2.8, ,48846,50.5,10,45129,46.7, ,Democratic,
 1860 - Lincoln,Ohio,442866,231709,52.3,23,187421,42.3, ,11406,2.6, ,12194,2.8, ,Republican,
@@ -424,7 +424,7 @@ Year,State,total,party.1,%,EV,party.2,%,EV,party.3,%,EV,party.4,%,EV,Party,Notes
 1860 - Lincoln,Tennessee,146106,0,0, ,11281,7.7, ,65097,44.6, ,69728,47.7,12,Other,
 1860 - Lincoln,Texas,62855,0,0, ,18,0, ,47454,75.5,4,15383,24.5, ,Democratic,
 1860 - Lincoln,Vermont,44644,33808,75.7,5,8649,19.4, ,218,0.5, ,1969,4.4, ,Republican,
-1860 - Lincoln,Virginia,166891,1887,1.1, ,16198,9.7, ,74325,44.5, ,74481,44.6,15,Democratic,
+1860 - Lincoln,Virginia,166891,1887,1.1, ,16198,9.7, ,74325,44.5, ,74481,44.6,15,Other,
 1860 - Lincoln,Wisconsin,152179,86110,56.6,5,65021,42.7, ,887,0.6, ,161,0.1, ,Republican,
 1864 - Lincoln,California,105890,62053,58.6,5,43837,41.4, ,,,,,,,Republican,
 1864 - Lincoln,Connecticut,86958,44673,51.4,6,42285,48.6, ,,,,,,,Republican,
@@ -705,7 +705,7 @@ Year,State,total,party.1,%,EV,party.2,%,EV,party.3,%,EV,party.4,%,EV,Party,Notes
 1892 - Cleveland,North Carolina,280270,132951,47.4,11,100346,35.8, ,44336,15.8, ,,,,Democratic,
 1892 - Cleveland,North Dakota,36118,0,0,1,17519,48.5,1,17700,49,1,,,,Other,
 1892 - Cleveland,Ohio,850164,404115,47.5,1,405187,47.7,22,14850,1.7, ,,,,Republican,
-1892 - Cleveland,Oregon,78378,14243,18.2, ,35002,44.7,3,26875,34.3,1,,,,Other,
+1892 - Cleveland,Oregon,78378,14243,18.2, ,35002,44.7,3,26875,34.3,1,,,,Republican,
 1892 - Cleveland,Pennsylvania,1003000,452264,45.1, ,516011,51.4,32,8714,0.9, ,,,,Republican,
 1892 - Cleveland,Rhode Island,53196,24336,45.7, ,26975,50.7,4,228,0.4, ,,,,Republican,
 1892 - Cleveland,South Carolina,70504,54680,77.6,9,13345,18.9, ,2407,3.4, ,,,,Democratic,
@@ -824,7 +824,7 @@ Year,State,total,party.1,%,EV,party.2,%,EV,party.3,%,EV,party.4,%,EV,Party,Notes
 1904 - Roosevelt,Kentucky,435946,205457,47.1, ,217170,49.8,13,,,,,,,Democratic,
 1904 - Roosevelt,Louisiana,53908,5205,9.7, ,47708,88.5,9,,,,,,,Democratic,
 1904 - Roosevelt,Maine,96036,64438,67.1,6,27648,28.8, ,,,,,,,Republican,
-1904 - Roosevelt,Maryland,224229,109497,48.8,1,109446,48.8,7,,,,,,,Republican,
+1904 - Roosevelt,Maryland,224229,109497,48.8,1,109446,48.8,7,,,,,,,Democratic,
 1904 - Roosevelt,Massachusetts,445100,257813,57.9,16,165746,37.2, ,,,,,,,Republican,
 1904 - Roosevelt,Michigan,520443,361863,69.5,14,134163,25.8, ,,,,,,,Republican,
 1904 - Roosevelt,Minnesota,292860,216651,74,11,55187,18.8, ,,,,,,,Republican,
@@ -869,7 +869,7 @@ Year,State,total,party.1,%,EV,party.2,%,EV,party.3,%,EV,party.4,%,EV,Party,Notes
 1908 - Taft,Kentucky,490719,235711,48, ,244092,49.7,13,,,,,,,Democratic,
 1908 - Taft,Louisiana,75117,8958,11.9, ,63568,84.6,9,,,,,,,Democratic,
 1908 - Taft,Maine,106335,66987,63,6,35403,33.3, ,,,,,,,Republican,
-1908 - Taft,Maryland,238531,116513,48.8,2,115908,48.6,6,,,,,,,Republican,
+1908 - Taft,Maryland,238531,116513,48.8,2,115908,48.6,6,,,,,,,Democratic,
 1908 - Taft,Massachusetts,456905,265966,58.2,16,155533,34, ,,,,,,,Republican,
 1908 - Taft,Michigan,538124,333313,61.9,14,174619,32.4, ,,,,,,,Republican,
 1908 - Taft,Minnesota,331328,195846,59.1,11,109411,33, ,,,,,,,Republican,
