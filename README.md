@@ -12,11 +12,13 @@ Wanted to expand on it with the following improvements:
 * expanding the dataset to the earliest possible election data
 * breaking down the states into regions, since there are clear election patterns
 
-## Graphics
+## Gallery
 
 ![Election Results by Region](https://raw.githubusercontent.com/zonination/election-history/master/Election-Region.png) 
 
 ![Election Results by State (ordered by Admission into Union)](https://raw.githubusercontent.com/zonination/election-history/master/Election-Order.png)
+
+![Election Results by State (ordered alphabetically)](https://raw.githubusercontent.com/zonination/election-history/master/Election-Alpha.png)
 
 ## Sources:
 
