@@ -1,6 +1,6 @@
 # US Presidential Elections since 1789
 
-**Note:** This project has been, to the best of my knowledge, double-checked and cross-checked. There may still be errors or inaccuracies. If you bump into an inaccuracy, simply open an issue so I can correct as soon as I can.
+**Note:** This project has been, to the best of my knowledge, verified to the best of my abilities. There may, however, still be errors or inaccuracies. If you bump into an inaccuracy, simply open an issue so I can correct as soon as I can.
 
 ## About
 
