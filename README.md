@@ -1,10 +1,6 @@
 # US Presidential Elections since 1789
 
-**Note:** This project is incomplete. There were some blips in the source file that rendered inaccurate election results in some states. I am currently in the middle of verifying each state.
-
-Verified up to:
-
-* 1840 - Harrison
+**Note:** This project has been, to the best of my knowledge, double-checked and cross-checked. There may still be errors or inaccuracies. If you bump into an inaccuracy, simply open an issue so I can correct as soon as I can.
 
 ## About
 
