@@ -105,47 +105,8 @@ for(n in 1:nrow(elec)){
 # Sort state data into Alphabetical order (starts out as reverse-ABC)
 elec$State <- factor(elec$State, rev(as.character(elec$State)))
 
-# Main Plot of the Data
+# Plot, Alphabetical
 # For all following plots, recommend 1600x900 Resolution
-ggplot(elec,aes(x=Year, y=State))+
-  geom_tile(aes(fill=Party,color=Party,alpha=Margin))+
-  geom_point(aes(color=Party),size=1)+
-  # For fill and colors, I picked ColorBrewer2.org's 6-class "Set1"
-  scale_fill_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
-  scale_color_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
-  # Hopefully we don't need to describe the Transparency (alpha).
-  guides(alpha="none")+
-  ylab("")+
-  xlab("Election Year")+
-  ggtitle("Election Results by State")+
-  theme_bw()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1,vjust=.5))+
-  # Annotating the plot for some major/minor notes
-  geom_vline(xintercept = 9.5, linetype=4)+ # Just a concept for annotated events
-  annotate("text",x=9.5,y=1,label="(Margin by Electoral College)",angle=90,hjust=0,vjust=-.5,size=3)+
-  annotate("text",x=9.5,y=1,label="(Margin by Popular Vote)",angle=90,hjust=0,vjust=1.5,size=3)
-
-# Alternate plot breaking down to regions
-ggplot(elec,aes(x=Year, y=State))+
-  geom_tile(aes(fill=Party,color=Party,alpha=Margin),na.rm=T)+
-  geom_point(aes(color=Party),size=1)+
-  # For fill and colors, I picked ColorBrewer2.org's 6-class "Set1"
-  scale_fill_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
-  scale_color_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
-  # Hopefully we don't need to describe the Transparency (alpha).
-  guides(alpha="none")+
-  ylab("")+
-  xlab("Election Year")+
-  ggtitle("Election Results by Region")+
-  theme_bw()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1,vjust=.5))+
-  facet_grid(Region~.,scales="free_y",space="free_y")+
-  # Annotating the plot for some major/minor notes
-  geom_vline(xintercept = 9.5, linetype=4) # Just a concept for annotated events
-
-elec$State<-reorder(elec$State,-elec$Admission)
-
-#Alternate plot, Ordered by admission to Union
 ggplot(elec,aes(x=Year, y=State))+
   geom_tile(aes(fill=Party,color=Party,alpha=Margin),na.rm=T)+
   # geom_point(aes(color=Party),size=1)+
@@ -157,7 +118,7 @@ ggplot(elec,aes(x=Year, y=State))+
   guides(alpha="none")+
   ylab("")+
   xlab("Election Year")+
-  ggtitle("Election Results by BEA Region")+
+  ggtitle("Election Results by Alphabetical Order")+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 1,vjust=.5))+
   theme(strip.text.y = element_text(size = 8))+
@@ -167,7 +128,31 @@ ggplot(elec,aes(x=Year, y=State))+
   annotate("text",x=9.5,y=1,label="(Margin by Electoral College)",angle=90,hjust=0,vjust=-.5,size=3)+
   annotate("text",x=9.5,y=1,label="(Margin by Popular Vote)",angle=90,hjust=0,vjust=1.5,size=3)
 
-#Alternate plot, Ordered by region, then by Admission
+elec$State<-reorder(elec$State,-elec$Admission)
+
+# Alternate plot, Ordered by admission to Union
+ggplot(elec,aes(x=Year, y=State))+
+  geom_tile(aes(fill=Party,color=Party,alpha=Margin),na.rm=T)+
+  # geom_point(aes(color=Party),size=1)+
+  # For fill and colors, I picked some from ColorBrewer2.org's 6-class "Set1"
+  scale_fill_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
+  scale_color_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
+  geom_text(aes(label=paste(substring(Party,1,1),substring(Party,12,12),sep=""),color=Party),fontface="bold",size=2)+
+  # Hopefully we don't need to describe the Transparency (alpha).
+  guides(alpha="none")+
+  ylab("")+
+  xlab("Election Year")+
+  ggtitle("Election Results by Admission into Union")+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1,vjust=.5))+
+  theme(strip.text.y = element_text(size = 8))+
+  # theme(legend.position="bottom")+
+  # Annotating the plot for some major/minor notes
+  geom_vline(xintercept = 9.5, linetype=4)+ # Just a concept for annotated events
+  annotate("text",x=9.5,y=1,label="(Margin by Electoral College)",angle=90,hjust=0,vjust=-.5,size=3)+
+  annotate("text",x=9.5,y=1,label="(Margin by Popular Vote)",angle=90,hjust=0,vjust=1.5,size=3)
+
+# Alternate plot, Ordered by region, then by Admission
 ggplot(elec,aes(x=Year, y=State))+
   geom_tile(aes(fill=Party,color=Party,alpha=Margin),na.rm=T)+
   # geom_point(aes(color=Party),size=1)+
