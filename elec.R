@@ -128,7 +128,7 @@ ggplot(elec,aes(x=Year, y=State))+
   geom_vline(xintercept = 9.5, linetype=4)+ # Just a concept for annotated events
   annotate("text",x=9.5,y=1,label="(Margin by Electoral College)",angle=90,hjust=0,vjust=-.5,size=3)+
   annotate("text",x=9.5,y=1,label="(Margin by Popular Vote)",angle=90,hjust=0,vjust=1.5,size=3)
-ggsave("Election-Alpha.png",width=16,height=9,units="in",dpi=100, type="cairo-png")
+ggsave("Election-Alpha.png",width=16,height=9,units="in",dpi=100)
 
 elec$State<-reorder(elec$State,-elec$Admission)
 
@@ -156,7 +156,7 @@ ggplot(elec,aes(x=Year, y=State))+
   geom_vline(xintercept = 9.5, linetype=4)+ # Just a concept for annotated events
   annotate("text",x=9.5,y=1,label="(Margin by Electoral College)",angle=90,hjust=0,vjust=-.5,size=3)+
   annotate("text",x=9.5,y=1,label="(Margin by Popular Vote)",angle=90,hjust=0,vjust=1.5,size=3)
-ggsave("Election-Order.png",width=16,height=9,units="in",dpi=100, type="cairo-png")
+ggsave("Election-Order.png",width=16,height=9,units="in",dpi=100)
 
 # Alternate plot, Ordered by region, then by Admission
 ggplot(elec,aes(x=Year, y=State))+
@@ -180,4 +180,4 @@ ggplot(elec,aes(x=Year, y=State))+
   # theme(legend.position="bottom")+
   # Annotating the plot for some major/minor notes
   geom_vline(xintercept = 9.5, linetype=4) # Just a concept for annotated events
-ggsave("Election-Region.png",width=16,height=9,units="in",dpi=100, type="cairo-png")
+ggsave("Election-Region.png",width=16,height=9,units="in",dpi=100)
