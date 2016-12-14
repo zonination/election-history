@@ -1,29 +1,29 @@
 Year,State,total,party.1,%,EV,party.2,%,EV,party.3,%,EV,party.4,%,EV,Party,Notes
-1789 - Washington,Connecticut,,7,,,0,,,,,,,,,Federalist,Electoral votes only
-1789 - Washington,Delaware,,3,,,0,,,,,,,,,Federalist,Electoral votes only
-1789 - Washington,Georgia,,5,,,0,,,,,,,,,Federalist,Electoral votes only
-1789 - Washington,Maryland,,6,,,0,,,,,,,,,Federalist,Electoral votes only
-1789 - Washington,Massachusetts,,10,,,0,,,,,,,,,Federalist,Electoral votes only
-1789 - Washington,New Hampshire,,5,,,0,,,,,,,,,Federalist,Electoral votes only
-1789 - Washington,New Jersey,,6,,,0,,,,,,,,,Federalist,Electoral votes only
-1789 - Washington,Pennsylvania,,10,,,0,,,,,,,,,Federalist,Electoral votes only
-1789 - Washington,South Carolina,,7,,,0,,,,,,,,,Federalist,Electoral votes only
-1789 - Washington,Virginia,,10,,,0,,,,,,,,,Federalist,Electoral votes only
-1792 - Washington,Massachusetts,,16,,,0,,,,,,,,,Federalist,Electoral votes only
-1792 - Washington,Rhode Island,,4,,,0,,,,,,,,,Federalist,Electoral votes only
-1792 - Washington,Connecticut,,9,,,0,,,,,,,,,Federalist,Electoral votes only
-1792 - Washington,New Jersey,,7,,,0,,,,,,,,,Federalist,Electoral votes only
-1792 - Washington,Delaware,,3,,,0,,,,,,,,,Federalist,Electoral votes only
-1792 - Washington,Maryland,,8,,,0,,,,,,,,,Federalist,Electoral votes only
-1792 - Washington,Vermont,,3,,,0,,,,,,,,,Federalist,Electoral votes only
-1792 - Washington,New Hampshire,,6,,,0,,,,,,,,,Federalist,Electoral votes only
-1792 - Washington,New York,,12,,,0,,,,,,,,,Federalist,Electoral votes only
-1792 - Washington,Pennsylvania,,15,,,0,,,,,,,,,Federalist,Electoral votes only
-1792 - Washington,Virginia,,21,,,0,,,,,,,,,Federalist,Electoral votes only
-1792 - Washington,Kentucky,,4,,,0,,,,,,,,,Federalist,Electoral votes only
-1792 - Washington,North Carolina,,12,,,0,,,,,,,,,Federalist,Electoral votes only
-1792 - Washington,South Carolina,,8,,,0,,,,,,,,,Federalist,Electoral votes only
-1792 - Washington,Georgia,,4,,,0,,,,,,,,,Federalist,Electoral votes only
+1789 - Washington,Connecticut,,7,,,0,,,,,,,,,Other,Electoral votes only
+1789 - Washington,Delaware,,3,,,0,,,,,,,,,Other,Electoral votes only
+1789 - Washington,Georgia,,5,,,0,,,,,,,,,Other,Electoral votes only
+1789 - Washington,Maryland,,6,,,0,,,,,,,,,Other,Electoral votes only
+1789 - Washington,Massachusetts,,10,,,0,,,,,,,,,Other,Electoral votes only
+1789 - Washington,New Hampshire,,5,,,0,,,,,,,,,Other,Electoral votes only
+1789 - Washington,New Jersey,,6,,,0,,,,,,,,,Other,Electoral votes only
+1789 - Washington,Pennsylvania,,10,,,0,,,,,,,,,Other,Electoral votes only
+1789 - Washington,South Carolina,,7,,,0,,,,,,,,,Other,Electoral votes only
+1789 - Washington,Virginia,,10,,,0,,,,,,,,,Other,Electoral votes only
+1792 - Washington,Massachusetts,,16,,,0,,,,,,,,,Other,Electoral votes only
+1792 - Washington,Rhode Island,,4,,,0,,,,,,,,,Other,Electoral votes only
+1792 - Washington,Connecticut,,9,,,0,,,,,,,,,Other,Electoral votes only
+1792 - Washington,New Jersey,,7,,,0,,,,,,,,,Other,Electoral votes only
+1792 - Washington,Delaware,,3,,,0,,,,,,,,,Other,Electoral votes only
+1792 - Washington,Maryland,,8,,,0,,,,,,,,,Other,Electoral votes only
+1792 - Washington,Vermont,,3,,,0,,,,,,,,,Other,Electoral votes only
+1792 - Washington,New Hampshire,,6,,,0,,,,,,,,,Other,Electoral votes only
+1792 - Washington,New York,,12,,,0,,,,,,,,,Other,Electoral votes only
+1792 - Washington,Pennsylvania,,15,,,0,,,,,,,,,Other,Electoral votes only
+1792 - Washington,Virginia,,21,,,0,,,,,,,,,Other,Electoral votes only
+1792 - Washington,Kentucky,,4,,,0,,,,,,,,,Other,Electoral votes only
+1792 - Washington,North Carolina,,12,,,0,,,,,,,,,Other,Electoral votes only
+1792 - Washington,South Carolina,,8,,,0,,,,,,,,,Other,Electoral votes only
+1792 - Washington,Georgia,,4,,,0,,,,,,,,,Other,Electoral votes only
 1796 - Adams,Connecticut,,9,,,0,,,,,,,,,Federalist,Electoral votes only
 1796 - Adams,Delaware,,3,,,0,,,,,,,,,Federalist,Electoral votes only
 1796 - Adams,Georgia,,0,,,4,,,,,,,,,Democratic-Republican,Electoral votes only

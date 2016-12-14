@@ -12,8 +12,7 @@
 # * Regions of US: http://www.census.gov/econ/census/help/geography/regions_and_divisions.html
 
 # Location, Libraries, and Data
-setwd("~/Dropbox/R/Election History")
-# setwd("C:/Users/mcarozzo/Desktop/")
+# setwd("~/Dropbox/R/Election History")
 elec <- read.csv("elec.csv", stringsAsFactors=F)
 library(ggplot2)
 library(gridExtra)
@@ -116,9 +115,11 @@ ggplot(elec,aes(x=Year, y=State))+
   geom_text(aes(label=paste(substring(Party,1,1),substring(Party,12,12),sep=""),color=Party),fontface="bold",size=2)+
   # Hopefully we don't need to describe the Transparency (alpha).
   guides(alpha="none")+
-  ylab("")+
-  xlab("Election Year")+
-  ggtitle("Election Results by Alphabetical Order")+
+  labs(title="Election Results by State",
+       subtitle="States ordered Alphabetically",
+       x="Election Year",
+       y="",
+       caption="created by /u/zonination")+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 1,vjust=.5))+
   theme(strip.text.y = element_text(size = 8))+
@@ -127,6 +128,7 @@ ggplot(elec,aes(x=Year, y=State))+
   geom_vline(xintercept = 9.5, linetype=4)+ # Just a concept for annotated events
   annotate("text",x=9.5,y=1,label="(Margin by Electoral College)",angle=90,hjust=0,vjust=-.5,size=3)+
   annotate("text",x=9.5,y=1,label="(Margin by Popular Vote)",angle=90,hjust=0,vjust=1.5,size=3)
+ggsave("Election-Alpha.png",width=16,height=9,units="in",dpi=100, type="cairo-png")
 
 elec$State<-reorder(elec$State,-elec$Admission)
 
@@ -140,9 +142,12 @@ ggplot(elec,aes(x=Year, y=State))+
   geom_text(aes(label=paste(substring(Party,1,1),substring(Party,12,12),sep=""),color=Party),fontface="bold",size=2)+
   # Hopefully we don't need to describe the Transparency (alpha).
   guides(alpha="none")+
-  ylab("")+
-  xlab("Election Year")+
-  ggtitle("Election Results by Admission into Union")+
+  guides(alpha="none")+
+  labs(title="Election Results by State",
+       subtitle="States ordered by Admission into Union",
+       x="Election Year",
+       y="",
+       caption="created by /u/zonination")+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 1,vjust=.5))+
   theme(strip.text.y = element_text(size = 8))+
@@ -151,6 +156,7 @@ ggplot(elec,aes(x=Year, y=State))+
   geom_vline(xintercept = 9.5, linetype=4)+ # Just a concept for annotated events
   annotate("text",x=9.5,y=1,label="(Margin by Electoral College)",angle=90,hjust=0,vjust=-.5,size=3)+
   annotate("text",x=9.5,y=1,label="(Margin by Popular Vote)",angle=90,hjust=0,vjust=1.5,size=3)
+ggsave("Election-Order.png",width=16,height=9,units="in",dpi=100, type="cairo-png")
 
 # Alternate plot, Ordered by region, then by Admission
 ggplot(elec,aes(x=Year, y=State))+
@@ -162,9 +168,11 @@ ggplot(elec,aes(x=Year, y=State))+
   geom_text(aes(label=paste(substring(Party,1,1),substring(Party,12,12),sep=""),color=Party),fontface="bold",size=2)+
   # Hopefully we don't need to describe the Transparency (alpha).
   guides(alpha="none")+
-  ylab("")+
-  xlab("Election Year")+
-  ggtitle("Election Results by BEA Region")+
+  labs(title="Election Results by State",
+       subtitle="States ordered by BEA Region, then by Admission into Union",
+       x="Election Year",
+       y="",
+       caption="created by /u/zonination")+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 1,vjust=.5))+
   theme(strip.text.y = element_text(size = 8))+
@@ -172,3 +180,4 @@ ggplot(elec,aes(x=Year, y=State))+
   # theme(legend.position="bottom")+
   # Annotating the plot for some major/minor notes
   geom_vline(xintercept = 9.5, linetype=4) # Just a concept for annotated events
+ggsave("Election-Region.png",width=16,height=9,units="in",dpi=100, type="cairo-png")
