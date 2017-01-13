@@ -18,6 +18,6 @@
 
 Note that before 1824, elections were decided by electoral only, not by the popular vote in each state. After 1824, the depth of color correlates to margin of victory, or `% of winning vote - % of next highest vote`. However, not all states went by popular vote after 1824, and instead some states chose candidates by electorate up until the American Civil War. These values and pre-1824 values are keyed at 75% opacity.
 
-The only parties that have definitions in the legend are parties that have been able to secure an election. Everything else is lumped under "Other".
+The only parties that have definitions in the legend are parties that have been able to secure an election (besides Washington who was independent). Everything else is lumped under "Other".
 
 [Full writeup](https://github.com/zonination/election-history/blob/master/README.md)
