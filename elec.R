@@ -99,7 +99,7 @@ for(n in 1:nrow(elec)){
   
   # Convert our year of Inception into a string
   elec$State.yr[n]<-paste("(",elec$Admission[n],") ",elec$State[n],sep="")
-}
+}; rm(col);rm(n)
 
 # Sort state data into Alphabetical order (starts out as reverse-ABC)
 elec$State <- factor(elec$State, rev(as.character(elec$State)))
