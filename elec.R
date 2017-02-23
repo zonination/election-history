@@ -102,82 +102,114 @@ for(n in 1:nrow(elec)){
 }; rm(col);rm(n)
 
 # Sort state data into Alphabetical order (starts out as reverse-ABC)
-elec$State <- factor(elec$State, rev(as.character(elec$State)))
+elec$State <- factor(elec$State, rev(as.character(unique(elec$State))))
 
-# Plot, Alphabetical
-# For all following plots, recommend 1600x900 Resolution
-ggplot(elec,aes(x=Year, y=State))+
-  geom_tile(aes(fill=Party,color=Party,alpha=Margin),na.rm=T)+
-  # geom_point(aes(color=Party),size=1)+
-  # For fill and colors, I picked some from ColorBrewer2.org's 6-class "Set1"
-  scale_fill_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
-  scale_color_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
-  geom_text(aes(label=paste(substring(Party,1,1),substring(Party,12,12),sep=""),color=Party),fontface="bold",size=2)+
-  # Hopefully we don't need to describe the Transparency (alpha).
-  guides(alpha="none")+
-  labs(title="Election Results by State",
-       subtitle="States ordered Alphabetically",
-       x="Election Year",
-       y="",
-       caption="created by /u/zonination")+
-  theme_bw()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1,vjust=.5))+
-  theme(strip.text.y = element_text(size = 8))+
-  # theme(legend.position="bottom")+
-  # Annotating the plot for some major/minor notes
-  geom_vline(xintercept = 9.5, linetype=4)+ # Just a concept for annotated events
-  annotate("text",x=9.5,y=1,label="(Margin by Electoral College)",angle=90,hjust=0,vjust=-.5,size=3)+
-  annotate("text",x=9.5,y=1,label="(Margin by Popular Vote)",angle=90,hjust=0,vjust=1.5,size=3)
-ggsave("Election-Alpha.png",width=16,height=9,units="in",dpi=100)
+# # Plot, Alphabetical
+# # For all following plots, recommend 1600x900 Resolution
+# ggplot(elec,aes(x=Year, y=State))+
+#   geom_tile(aes(fill=Party,color=Party,alpha=Margin),na.rm=T)+
+#   # geom_point(aes(color=Party),size=1)+
+#   # For fill and colors, I picked some from ColorBrewer2.org's 6-class "Set1"
+#   scale_fill_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
+#   scale_color_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
+#   geom_text(aes(label=paste(substring(Party,1,1),substring(Party,12,12),sep=""),color=Party),fontface="bold",size=2)+
+#   # Hopefully we don't need to describe the Transparency (alpha).
+#   guides(alpha="none")+
+#   labs(title="Election Results by State",
+#        subtitle="States ordered Alphabetically",
+#        x="Election Year",
+#        y="",
+#        caption="created by /u/zonination")+
+#   theme_bw()+
+#   theme(axis.text.x = element_text(angle = 90, hjust = 1,vjust=.5))+
+#   theme(strip.text.y = element_text(size = 8))+
+#   # theme(legend.position="bottom")+
+#   # Annotating the plot for some major/minor notes
+#   geom_vline(xintercept = 9.5, linetype=4)+ # Just a concept for annotated events
+#   annotate("text",x=9.5,y=1,label="(Margin by Electoral College)",angle=90,hjust=0,vjust=-.5,size=3)+
+#   annotate("text",x=9.5,y=1,label="(Margin by Popular Vote)",angle=90,hjust=0,vjust=1.5,size=3)
+# ggsave("Election-Alpha.png",width=16,height=9,units="in",dpi=100)
+# 
+# elec$State<-reorder(elec$State,-elec$Admission)
+# 
+# # Alternate plot, Ordered by admission to Union
+# ggplot(elec,aes(x=Year, y=State))+
+#   geom_tile(aes(fill=Party,color=Party,alpha=Margin),na.rm=T)+
+#   # geom_point(aes(color=Party),size=1)+
+#   # For fill and colors, I picked some from ColorBrewer2.org's 6-class "Set1"
+#   scale_fill_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
+#   scale_color_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
+#   geom_text(aes(label=paste(substring(Party,1,1),substring(Party,12,12),sep=""),color=Party),fontface="bold",size=2)+
+#   # Hopefully we don't need to describe the Transparency (alpha).
+#   guides(alpha="none")+
+#   guides(alpha="none")+
+#   labs(title="Election Results by State",
+#        subtitle="States ordered by Admission into Union",
+#        x="Election Year",
+#        y="",
+#        caption="created by /u/zonination")+
+#   theme_bw()+
+#   theme(axis.text.x = element_text(angle = 90, hjust = 1,vjust=.5))+
+#   theme(strip.text.y = element_text(size = 8))+
+#   # theme(legend.position="bottom")+
+#   # Annotating the plot for some major/minor notes
+#   geom_vline(xintercept = 9.5, linetype=4)+ # Just a concept for annotated events
+#   annotate("text",x=9.5,y=1,label="(Margin by Electoral College)",angle=90,hjust=0,vjust=-.5,size=3)+
+#   annotate("text",x=9.5,y=1,label="(Margin by Popular Vote)",angle=90,hjust=0,vjust=1.5,size=3)
+# ggsave("Election-Order.png",width=16,height=9,units="in",dpi=100)
+# 
+# # Alternate plot, Ordered by region, then by Admission
+# ggplot(elec,aes(x=Year, y=State))+
+#   geom_tile(aes(fill=Party,color=Party,alpha=Margin),na.rm=T)+
+#   # geom_point(aes(color=Party),size=1)+
+#   # For fill and colors, I picked some from ColorBrewer2.org's 6-class "Set1"
+#   scale_fill_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
+#   scale_color_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
+#   geom_text(aes(label=paste(substring(Party,1,1),substring(Party,12,12),sep=""),color=Party),fontface="bold",size=2)+
+#   # Hopefully we don't need to describe the Transparency (alpha).
+#   guides(alpha="none")+
+#   labs(title="Election Results by State",
+#        subtitle="States ordered by BEA Region, then by Admission into Union",
+#        x="Election Year",
+#        y="",
+#        caption="created by /u/zonination")+
+#   theme_bw()+
+#   theme(axis.text.x = element_text(angle = 90, hjust = 1,vjust=.5))+
+#   theme(strip.text.y = element_text(size = 8))+
+#   facet_grid(BEA~.,scales="free_y",space="free_y")+
+#   # theme(legend.position="bottom")+
+#   # Annotating the plot for some major/minor notes
+#   geom_vline(xintercept = 9.5, linetype=4) # Just a concept for annotated events
+# ggsave("Election-Region.png",width=16,height=9,units="in",dpi=100)
 
-elec$State<-reorder(elec$State,-elec$Admission)
 
-# Alternate plot, Ordered by admission to Union
-ggplot(elec,aes(x=Year, y=State))+
-  geom_tile(aes(fill=Party,color=Party,alpha=Margin),na.rm=T)+
-  # geom_point(aes(color=Party),size=1)+
-  # For fill and colors, I picked some from ColorBrewer2.org's 6-class "Set1"
-  scale_fill_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
-  scale_color_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
-  geom_text(aes(label=paste(substring(Party,1,1),substring(Party,12,12),sep=""),color=Party),fontface="bold",size=2)+
-  # Hopefully we don't need to describe the Transparency (alpha).
-  guides(alpha="none")+
-  guides(alpha="none")+
-  labs(title="Election Results by State",
-       subtitle="States ordered by Admission into Union",
-       x="Election Year",
-       y="",
-       caption="created by /u/zonination")+
-  theme_bw()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1,vjust=.5))+
-  theme(strip.text.y = element_text(size = 8))+
-  # theme(legend.position="bottom")+
-  # Annotating the plot for some major/minor notes
-  geom_vline(xintercept = 9.5, linetype=4)+ # Just a concept for annotated events
-  annotate("text",x=9.5,y=1,label="(Margin by Electoral College)",angle=90,hjust=0,vjust=-.5,size=3)+
-  annotate("text",x=9.5,y=1,label="(Margin by Popular Vote)",angle=90,hjust=0,vjust=1.5,size=3)
-ggsave("Election-Order.png",width=16,height=9,units="in",dpi=100)
+library(tidyverse)
 
-# Alternate plot, Ordered by region, then by Admission
-ggplot(elec,aes(x=Year, y=State))+
-  geom_tile(aes(fill=Party,color=Party,alpha=Margin),na.rm=T)+
-  # geom_point(aes(color=Party),size=1)+
-  # For fill and colors, I picked some from ColorBrewer2.org's 6-class "Set1"
-  scale_fill_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
-  scale_color_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"))+
-  geom_text(aes(label=paste(substring(Party,1,1),substring(Party,12,12),sep=""),color=Party),fontface="bold",size=2)+
-  # Hopefully we don't need to describe the Transparency (alpha).
-  guides(alpha="none")+
-  labs(title="Election Results by State",
-       subtitle="States ordered by BEA Region, then by Admission into Union",
-       x="Election Year",
-       y="",
-       caption="created by /u/zonination")+
-  theme_bw()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 1,vjust=.5))+
-  theme(strip.text.y = element_text(size = 8))+
-  facet_grid(BEA~.,scales="free_y",space="free_y")+
-  # theme(legend.position="bottom")+
-  # Annotating the plot for some major/minor notes
-  geom_vline(xintercept = 9.5, linetype=4) # Just a concept for annotated events
-ggsave("Election-Region.png",width=16,height=9,units="in",dpi=100)
+elec %>% glimpse
+
+elec %>%
+    tbl_df %>%
+    ggplot(mapping = aes(x = Year, y = State)) +
+    geom_tile(mapping = aes(fill = Party, alpha = Margin*100), width = 0.9, height = 0.9) +
+    facet_grid(BEA ~ ., scales = 'free', space = 'free') +
+    theme_bw() +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          strip.text.x = element_text(size = 6),
+          plot.title = element_text(size = 20)) +
+    # scale_fill_brewer(type = 'qual') +
+    scale_fill_manual(values = c("#377eb8","#984ea3","#ff7f00","#4daf4a","#e41a1c","#e6ab02"),
+                      guide = guide_legend(keywidth = 1.1,
+                                           keyheight = 1.1,
+                                           title = 'party')) +
+    scale_alpha_continuous(range = c(0.3, 1),
+                           guide = guide_legend(title = 'margin')) +
+    labs(title="US Presidential Election Results",
+         subtitle="States ordered by BEA region, then by admission into union",
+         x="Election Year",
+         y="",
+         caption="created by /u/zonination, modified by @rcorty")
+
+ggsave(filename = "US_presidential_elections.pdf", width=16, height=11)
+
