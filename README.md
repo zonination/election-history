@@ -2,7 +2,7 @@
 
 **Note:** This project has been, to the best of my knowledge, verified to the best of my abilities. There may, however, still be errors or inaccuracies. If you bump into an inaccuracy, simply open an issue so I can correct as soon as I can.
 
-## About
+## About ###
 
 Inspired by [this Reddit post](https://www.reddit.com/r/dataisbeautiful/comments/3pxna7/100_years_of_us_presidential_elections_a_table_of/).
 
